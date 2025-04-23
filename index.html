@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
+        
         :root {
             --primary-color: #3a502c;
             --secondary-color: #27AE60;
@@ -18,7 +20,7 @@
 
         .hero-section {
             background: linear-gradient(rgba(44, 80, 79, 0.9), rgba(70, 80, 44, 0.9)),
-                        url('https://www.aii.et/wp-content/uploads/2024/02/fresh.jpg');
+                        url('https://img.freepik.com/free-vector/hand-drawn-pattern-background_23-2150829943.jpg?ga=GA1.1.405818120.1745442910&semt=ais_hybrid&w=740');
             background-size: cover;
             color: white;
             padding: 100px 0;
@@ -45,6 +47,7 @@
             background: var(--light-bg);
             border-radius: 15px;
             overflow-y: auto;
+            background-color: azure;
         }
 
         .chat-message {
@@ -112,31 +115,19 @@
         .invalid-key {
             color: #E74C3C;
         }
+        .header{
+          background-color: beige;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="header">
         <div class="container">
-            <a class="navbar-brand" href="#">GroceryGuru 🛒</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#demo">Try Demo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+            
+                
+            
+     </div>
 
     <!-- API Key Section -->
     
@@ -144,7 +135,7 @@
     <!-- Hero Section -->
     <section class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 mb-4">Smart Grocery Planning with AI</h1>
+            <h1 class="display-4 mb-4">GroceryGuru🛒 - Planning with AI</h1>
             <p class="lead mb-4">Meet GroceryGuru — your personal AI-powered grocery planner designed to help you maximize savings, minimize waste, and eat smarter. Whether you're feeding a family or shopping for one, our intelligent chatbot creates personalized meal plans, budget-friendly shopping lists, and savvy tips tailored to your weekly budget and preferences.
                 Plan smarter. Shop better. Save more — with the power of AI at your fingertips.</p>
                 </div>
@@ -189,10 +180,10 @@
     <!-- Demo Section -->
     <section id="demo" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Try ChatBot</h2>
+            <h2 class="text-center mb-5">Try GroceryGuru 🛒</h2>
             <div class="chat-container mb-3 p-3">
                 <div class="chat-message bot-message">
-                    Hi! I'm ChatBoat. Let's plan your meals in three simple steps:<br>
+                    Hi! I'm GroceryGuru. Let's plan your meals in three simple steps:<br>
                     Let's start! What's your diet preference?
                 </div>
                 <div id="chat-messages"></div>
@@ -203,11 +194,11 @@
             </div>
         </div>
     </section>
-
+    </div>
     <!-- Footer -->
     <footer class="bg-dark text-light py-4">
         <div class="container text-center">
-            <p>&copy; 2025 ChatBoat - AI Grocery Budget Planner</p>
+            <p>&copy; 2025 GroceryGuru - AI Grocery Budget Planner</p>
         </div>
     </footer>
 
@@ -307,15 +298,15 @@
                     userDiet = 'nonVegetarian';
                     currentStep = 2;
                     return `Great choice! For non-vegetarian meals, we have three budget options:
-                    - Low Budget: $50-60 per week
-                    - Medium Budget: $70-80 per week
-                    - High Budget: $100-120 per week
+                    1. Low Budget: $50-60 per week
+                    2. Medium Budget: $70-80 per week
+                    3. High Budget: $100-120 per week
                     
                     Which budget level would you prefer?`;
                 } else {
                     return `Please choose your diet type:
-                    - Vegetarian
-                    - Non-Vegetarian
+                    1. Vegetarian
+                    2. Non-Vegetarian
                     
                     Just type your preference!`;
                 }
@@ -461,9 +452,9 @@
                         return `${groceryPlan}
                         
                         Would you like to:
-                        - Start over with a new plan (type 'new' or 'start over')
-                        - Get more details about any specific meal
-                        - Adjust your budget or diet type`;
+                        1. Start over with a new plan (type 'new' or 'start over')
+                        2. Get more details about any specific meal
+                        3. Adjust your budget or diet type`;
                     } else {
                         throw new Error('Invalid response from API');
                     }
